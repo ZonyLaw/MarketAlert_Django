@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from marketApi.views import get_ticker
+from marketApi.views import get_ticker, create_ticker
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', get_ticker, name='get_ticker')
+    path('', get_ticker, name='get_ticker'),
+    path('form/', create_ticker, name='create_ticker')
 ]
