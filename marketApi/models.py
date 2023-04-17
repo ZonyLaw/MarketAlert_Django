@@ -5,7 +5,7 @@ from datetime import date
 
 class Trade(models.Model):
     ticker = models.CharField(max_length=10, null=False, blank=False)
-    price = models.FloatField(null=False, blank=True, default=False)
+    price = models.FloatField(null=False, blank=True, default=0)
     # method = models.CharField(max_length=10, null=False, blank=True)
     outcome = models.CharField(max_length=10, null=False, blank=True)
     comment = models.TextField(null=False, blank=True)
